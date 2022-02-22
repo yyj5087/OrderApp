@@ -25,5 +25,6 @@ class EditNicknameActivity : AppCompatActivity() {
     }
     fun setupValues(){
 
+
     }
 }
