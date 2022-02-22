@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="105dp"/>
         <TextView
+            android:id="@+id/txtStore"
             android:text="실제 가게이름 자리"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,6 +45,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
             <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/ratingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -55,6 +57,7 @@
                 android:text="(3,5)"/>
         </LinearLayout>
         <TextView
+            android:id="@+id/txtphone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="대표전화번호"
@@ -75,6 +78,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
             <Button
+                android:id="@+id/btnButton"
                 android:text="전화주문"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
