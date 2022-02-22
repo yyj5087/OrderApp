@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
+import com.bumptech.glide.Glide
 import com.nepplus.orderapp.R
 import com.nepplus.orderapp.datas.StoreData
 import java.util.zip.Inflater
@@ -25,10 +26,13 @@ class StoreAdapter(
         }
         val row = tempRow!!
         val data = mList[position]
-        val imgLogo = row.findViewById<ImageView>(R.id.image)
+        val imgLogo = row.findViewById<ImageView>(R.id.imgLogo)
         val txtView = row.findViewById<TextView>(R.id.txtView)
         val ratingBar = row.findViewById<TextView>(R.id.ratingBar)
         txtView.text = data.name
+
+        Glide.with(mContext).load(data.logoImageURL).into(imgLogo)
+
         return row
 
     }
