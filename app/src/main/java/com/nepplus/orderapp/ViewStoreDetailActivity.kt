@@ -2,7 +2,9 @@ package com.nepplus.orderapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import com.nepplus.orderapp.datas.StoreData
+import kotlinx.android.synthetic.main.activity_view_store_detail.*
 
 class ViewStoreDetailActivity : AppCompatActivity() {
 
@@ -19,6 +21,11 @@ class ViewStoreDetailActivity : AppCompatActivity() {
 
     }
     fun setupValues(){
+        Glide.with(this).load(mStoreData.logoImageURL).into(imgLogo)
 
+        txtStore.text = mStoreData.name
+        txtphone.text = mStoreData.phone
+        ratingBar.rating = mStoreData.rating.toFloat()
+        txtRating.text = "${mStoreData.rating}"
     }
 }

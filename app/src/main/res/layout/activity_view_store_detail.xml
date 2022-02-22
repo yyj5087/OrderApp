@@ -46,9 +46,12 @@
             android:orientation="horizontal">
             <com.willy.ratingbar.ScaleRatingBar
                 android:id="@+id/ratingBar"
+                app:srb_isIndicator="false"
+                app:srb_stepSize="0.5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/txtRating"
                 android:layout_marginStart="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,7 +60,6 @@
                 android:text="(3,5)"/>
         </LinearLayout>
         <TextView
-            android:id="@+id/txtphone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="대표전화번호"
@@ -68,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/txtphone"
                 android:text="실제 전화번호자리"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -78,7 +81,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
             <Button
-                android:id="@+id/btnButton"
+                android:id="@+id/btnCall"
                 android:text="전화주문"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
