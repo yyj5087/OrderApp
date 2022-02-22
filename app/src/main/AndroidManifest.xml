@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nepplus.orderapp">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrderApp"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".EditNicknameActivity"
+            android:exported="true" />
         <activity
             android:name=".ViewStoreDetailActivity"
             android:exported="true" />
