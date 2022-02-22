@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
 import com.nepplus.orderapp.R
 import com.nepplus.orderapp.datas.StoreData
+import com.willy.ratingbar.ScaleRatingBar
 import java.util.zip.Inflater
 
 class StoreAdapter(
@@ -28,10 +29,12 @@ class StoreAdapter(
         val data = mList[position]
         val imgLogo = row.findViewById<ImageView>(R.id.imgLogo)
         val txtView = row.findViewById<TextView>(R.id.txtView)
-        val ratingBar = row.findViewById<TextView>(R.id.ratingBar)
+        val ratingBar = row.findViewById<ScaleRatingBar>(R.id.ratingBar)
         txtView.text = data.name
 
         Glide.with(mContext).load(data.logoImageURL).into(imgLogo)
+
+        ratingBar.rating = data.rating.toFloat()
 
         return row
 
